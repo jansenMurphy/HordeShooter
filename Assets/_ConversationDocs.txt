@@ -1,0 +1,28 @@
+Conversations and the dialogue system as a whole rely on multiple complicated parts to work properly.
+
+The largest part of the dialogue system is the Conversation object that holds Conversant objects and outputs events to the dialogue listener.
+
+Conversants hold a bunch of Statements as possible replies to other Statements
+
+Statements have the following:
+	An ID that lets them be called or addressed
+	An animation trigger string that the Conversant or conversation UI may use to change a picture or animation. This is also how voice acting would happen.
+	A Text String key that references a specific line of text. This isn't just the text because multiple statements may need to reference the same text and
+	
+A conversant must start a conversation with another conversant by saying a statement. At the beginning of conversation (and potentially later as needed) all conversants are queried as to whether they should join the conversation and are allowed to at this time. 
+Then all conversants find which statements they can have as reply Statements to the previous Statement. 
+	This happens until a conversant says something to which no conversant has a reply Statement or some (external) event happens that would stop a conversation.
+
+What do I need to show?:
+
+Player starts conversation
+	plr_startconvo
+Smiley has multiple Statements to start the conversation depending on rapport
+	smi_nice_hi, smi_angry_hi (smi_freak_out)
+Player can do multiple things
+	plr_ask_weather, plr_ask_money, plr_draw_gun
+Smiley's responses
+	smi_respond_weather_nice, smi_respond_weather_angry, smi_give_money, smi_refuse_money, smi_freak_out
+Player's Responses
+	plr_goodbye
+	

@@ -1,0 +1,1 @@
+﻿[System.Serializable]public class ConversationStartUnityEvent : UnityEngine.Events.UnityEvent<ConversationStartStruct> { }

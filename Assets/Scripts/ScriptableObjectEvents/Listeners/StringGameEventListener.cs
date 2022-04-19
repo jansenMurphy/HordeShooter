@@ -1,0 +1,1 @@
+public class StringGameEventListener : BaseGameEventListener<string, StringGameEvent, UnityStringEvent> { }

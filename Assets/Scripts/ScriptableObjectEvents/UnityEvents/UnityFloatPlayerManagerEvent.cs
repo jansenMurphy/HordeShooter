@@ -1,0 +1,1 @@
+[System.Serializable] public class UnityFloatPlayerManagerEvent : UnityEngine.Events.UnityEvent<(float,PlayerManager)> { }
